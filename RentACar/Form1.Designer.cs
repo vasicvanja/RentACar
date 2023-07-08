@@ -124,6 +124,7 @@
             // 
             // btnDeleteClient
             // 
+            btnDeleteClient.Enabled = false;
             btnDeleteClient.Location = new Point(6, 563);
             btnDeleteClient.Margin = new Padding(3, 4, 3, 4);
             btnDeleteClient.Name = "btnDeleteClient";
@@ -153,6 +154,7 @@
             lbCustomers.Name = "lbCustomers";
             lbCustomers.Size = new Size(348, 464);
             lbCustomers.TabIndex = 0;
+            lbCustomers.SelectedIndexChanged += lbCustomers_SelectedIndexChanged;
             // 
             // groupBox3
             // 

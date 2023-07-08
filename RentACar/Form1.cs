@@ -84,5 +84,17 @@ namespace RentACar
                 return;
             }
         }
+
+        private void lbCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbCustomers.Items.Count == 0)
+            {
+                btnDeleteClient.Enabled = false;
+            }
+            else
+            {
+                btnDeleteClient.Enabled = true;
+            }
+        }
     }
 }
