@@ -38,17 +38,17 @@
             btnAddClient = new Button();
             lbCustomers = new ListBox();
             groupBox3 = new GroupBox();
+            dtpTo = new DateTimePicker();
+            dtpFrom = new DateTimePicker();
+            tbTotalPrice = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             btnDetails = new Button();
             btnDeleteRental = new Button();
             btnAddRental = new Button();
             lbRentals = new ListBox();
             fileSystemWatcher1 = new FileSystemWatcher();
-            label1 = new Label();
-            label2 = new Label();
-            tbFrom = new TextBox();
-            tbTo = new TextBox();
-            tbTotal = new TextBox();
-            label3 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -164,10 +164,10 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(tbTotal);
+            groupBox3.Controls.Add(dtpTo);
+            groupBox3.Controls.Add(dtpFrom);
+            groupBox3.Controls.Add(tbTotalPrice);
             groupBox3.Controls.Add(label3);
-            groupBox3.Controls.Add(tbTo);
-            groupBox3.Controls.Add(tbFrom);
             groupBox3.Controls.Add(label2);
             groupBox3.Controls.Add(label1);
             groupBox3.Controls.Add(btnDetails);
@@ -178,40 +178,98 @@
             groupBox3.Margin = new Padding(3, 4, 3, 4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 4, 3, 4);
-            groupBox3.Size = new Size(360, 803);
+            groupBox3.Size = new Size(406, 803);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
             groupBox3.Text = "Изнајмувања";
             // 
+            // dtpTo
+            // 
+            dtpTo.Enabled = false;
+            dtpTo.Location = new Point(135, 713);
+            dtpTo.Name = "dtpTo";
+            dtpTo.Size = new Size(262, 27);
+            dtpTo.TabIndex = 9;
+            dtpTo.ValueChanged += dtpTo_ValueChanged;
+            // 
+            // dtpFrom
+            // 
+            dtpFrom.Enabled = false;
+            dtpFrom.Location = new Point(135, 671);
+            dtpFrom.Name = "dtpFrom";
+            dtpFrom.Size = new Size(262, 27);
+            dtpFrom.TabIndex = 4;
+            dtpFrom.ValueChanged += dtpFrom_ValueChanged;
+            // 
+            // tbTotalPrice
+            // 
+            tbTotalPrice.Enabled = false;
+            tbTotalPrice.Location = new Point(135, 757);
+            tbTotalPrice.Name = "tbTotalPrice";
+            tbTotalPrice.Size = new Size(262, 27);
+            tbTotalPrice.TabIndex = 8;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 760);
+            label3.Name = "label3";
+            label3.Size = new Size(99, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Вкупна цена:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 718);
+            label2.Name = "label2";
+            label2.Size = new Size(31, 20);
+            label2.TabIndex = 4;
+            label2.Text = "До:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 678);
+            label1.Name = "label1";
+            label1.Size = new Size(31, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Од:";
+            // 
             // btnDetails
             // 
+            btnDetails.Enabled = false;
             btnDetails.Location = new Point(6, 617);
             btnDetails.Margin = new Padding(3, 5, 3, 5);
             btnDetails.Name = "btnDetails";
-            btnDetails.Size = new Size(347, 31);
+            btnDetails.Size = new Size(391, 31);
             btnDetails.TabIndex = 3;
             btnDetails.Text = "Детали за изнајмување";
             btnDetails.UseVisualStyleBackColor = true;
             // 
             // btnDeleteRental
             // 
+            btnDeleteRental.Enabled = false;
             btnDeleteRental.Location = new Point(6, 563);
             btnDeleteRental.Margin = new Padding(3, 4, 3, 4);
             btnDeleteRental.Name = "btnDeleteRental";
-            btnDeleteRental.Size = new Size(347, 31);
+            btnDeleteRental.Size = new Size(391, 31);
             btnDeleteRental.TabIndex = 2;
             btnDeleteRental.Text = "Избриши изнајмување";
             btnDeleteRental.UseVisualStyleBackColor = true;
+            btnDeleteRental.Click += btnDeleteRental_Click;
             // 
             // btnAddRental
             // 
+            btnAddRental.Enabled = false;
             btnAddRental.Location = new Point(6, 509);
             btnAddRental.Margin = new Padding(3, 4, 3, 4);
             btnAddRental.Name = "btnAddRental";
-            btnAddRental.Size = new Size(347, 31);
+            btnAddRental.Size = new Size(391, 31);
             btnAddRental.TabIndex = 1;
             btnAddRental.Text = "Додади изнајмување";
             btnAddRental.UseVisualStyleBackColor = true;
+            btnAddRental.Click += btnAddRental_Click;
             // 
             // lbRentals
             // 
@@ -220,61 +278,14 @@
             lbRentals.Location = new Point(6, 27);
             lbRentals.Margin = new Padding(3, 4, 3, 4);
             lbRentals.Name = "lbRentals";
-            lbRentals.Size = new Size(348, 464);
+            lbRentals.Size = new Size(391, 464);
             lbRentals.TabIndex = 0;
+            lbRentals.SelectedIndexChanged += lbRentals_SelectedIndexChanged;
             // 
             // fileSystemWatcher1
             // 
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(54, 676);
-            label1.Name = "label1";
-            label1.Size = new Size(31, 20);
-            label1.TabIndex = 4;
-            label1.Text = "Од:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(54, 718);
-            label2.Name = "label2";
-            label2.Size = new Size(31, 20);
-            label2.TabIndex = 4;
-            label2.Text = "До:";
-            // 
-            // tbFrom
-            // 
-            tbFrom.Location = new Point(185, 673);
-            tbFrom.Name = "tbFrom";
-            tbFrom.Size = new Size(125, 27);
-            tbFrom.TabIndex = 5;
-            // 
-            // tbTo
-            // 
-            tbTo.Location = new Point(185, 715);
-            tbTo.Name = "tbTo";
-            tbTo.Size = new Size(125, 27);
-            tbTo.TabIndex = 6;
-            // 
-            // tbTotal
-            // 
-            tbTotal.Location = new Point(185, 757);
-            tbTotal.Name = "tbTotal";
-            tbTotal.Size = new Size(125, 27);
-            tbTotal.TabIndex = 8;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(54, 760);
-            label3.Name = "label3";
-            label3.Size = new Size(99, 20);
-            label3.TabIndex = 7;
-            label3.Text = "Вкупна цена:";
             // 
             // Form1
             // 
@@ -312,11 +323,11 @@
         private Button btnDetails;
         private FileSystemWatcher fileSystemWatcher1;
         private Button btnHistoryOfRentals;
-        private TextBox tbTotal;
+        private TextBox tbTotalPrice;
         private Label label3;
-        private TextBox tbTo;
-        private TextBox tbFrom;
         private Label label2;
         private Label label1;
+        private DateTimePicker dtpFrom;
+        private DateTimePicker dtpTo;
     }
 }
