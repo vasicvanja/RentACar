@@ -116,6 +116,7 @@ namespace RentACar
                 {
                     rental.TotalPrice = int.Parse(tbTotalPrice.Text);
                     lbRentals.Items.Add(rental);
+                    calculateTotalEarning();
                     lbCars.SelectedItems.Clear();
                     lbCustomers.SelectedItems.Clear();
                     btnAddRental.Enabled = false;
@@ -140,6 +141,7 @@ namespace RentACar
                 {
                     lbRentals.Items.RemoveAt(lbRentals.SelectedIndex);
                     tbTotalPrice.Text = "";
+                    calculateTotalEarning();
                 }
             }
             else
@@ -233,6 +235,16 @@ namespace RentACar
             }
         }
 
+        public void calculateTotalEarning()
+        {
+            int total = 0;
+            foreach(Rent rent in lbRentals.Items)
+            {
+                total += rent.TotalPrice;
+            }
+            tbTotalEarned.Text = total.ToString();
+        }
+
         private void btnDetails_Click(object sender, EventArgs e)
         {
             if (lbRentals.SelectedIndex != -1)
@@ -241,7 +253,7 @@ namespace RentACar
                 RentalDetails rentalDetails = new RentalDetails(selectedRental);
                 if (rentalDetails.ShowDialog() == DialogResult.OK)
                 {
-
+                    lbRentals.SelectedItems.Clear();
                 }
             }
             else

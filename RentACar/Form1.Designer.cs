@@ -48,11 +48,11 @@
             btnDeleteRental = new Button();
             btnAddRental = new Button();
             lbRentals = new ListBox();
-            fileSystemWatcher1 = new FileSystemWatcher();
+            label4 = new Label();
+            tbTotalEarned = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
             // lbCars
@@ -195,10 +195,10 @@
             // 
             // tbTotalPrice
             // 
-            tbTotalPrice.Enabled = false;
             tbTotalPrice.Location = new Point(118, 568);
             tbTotalPrice.Margin = new Padding(3, 2, 3, 2);
             tbTotalPrice.Name = "tbTotalPrice";
+            tbTotalPrice.ReadOnly = true;
             tbTotalPrice.Size = new Size(230, 23);
             tbTotalPrice.TabIndex = 8;
             // 
@@ -273,16 +273,30 @@
             lbRentals.TabIndex = 0;
             lbRentals.SelectedIndexChanged += lbRentals_SelectedIndexChanged;
             // 
-            // fileSystemWatcher1
+            // label4
             // 
-            fileSystemWatcher1.EnableRaisingEvents = true;
-            fileSystemWatcher1.SynchronizingObject = this;
+            label4.AutoSize = true;
+            label4.Location = new Point(43, 563);
+            label4.Name = "label4";
+            label4.Size = new Size(132, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Вкупна заработувачка:";
+            // 
+            // tbTotalEarned
+            // 
+            tbTotalEarned.Location = new Point(198, 559);
+            tbTotalEarned.Name = "tbTotalEarned";
+            tbTotalEarned.ReadOnly = true;
+            tbTotalEarned.Size = new Size(137, 23);
+            tbTotalEarned.TabIndex = 5;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1280, 749);
+            Controls.Add(tbTotalEarned);
+            Controls.Add(label4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -292,8 +306,8 @@
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -311,7 +325,6 @@
         private Button btnAddRental;
         private ListBox lbRentals;
         private Button btnDetails;
-        private FileSystemWatcher fileSystemWatcher1;
         private Button btnHistoryOfRentals;
         private TextBox tbTotalPrice;
         private Label label3;
@@ -319,5 +332,7 @@
         private Label label1;
         private DateTimePicker dtpFrom;
         private DateTimePicker dtpTo;
+        private Label label4;
+        private TextBox tbTotalEarned;
     }
 }
