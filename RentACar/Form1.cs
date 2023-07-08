@@ -27,6 +27,8 @@ namespace RentACar
                     }
                 }
                 lbCars.Items.Add(newCar.Car);
+                getCheapest();
+                getMostExpensive();
             }
         }
 
@@ -37,6 +39,8 @@ namespace RentACar
                 if (MessageBox.Show("Дали сте сигурни дека сакате да го избришете овој автомобил?", "Избриши автомобил", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     lbCars.Items.RemoveAt(lbCars.SelectedIndex);
+                    getCheapest();
+                    getMostExpensive();
                 }
             }
             else
@@ -125,6 +129,9 @@ namespace RentACar
                     btnAddRental.Enabled = false;
                     dtpFrom.Enabled = false;
                     dtpTo.Enabled = false;
+                    minRent();
+                    maxRent();
+                    avgRent();
                 }
                 else
                 {
@@ -145,6 +152,9 @@ namespace RentACar
                     lbRentals.Items.RemoveAt(lbRentals.SelectedIndex);
                     tbTotalPrice.Text = "";
                     calculateTotalEarning();
+                    minRent();
+                    maxRent();
+                    avgRent();
                 }
             }
             else
@@ -160,14 +170,11 @@ namespace RentACar
             if (lbRentals.SelectedIndex != -1)
             {
                 btnDetails.Enabled = true;
+                btnDeleteRental.Enabled = true;
             }
             if (lbRentals.Items.Count == 0)
             {
                 btnDeleteRental.Enabled = false;
-            }
-            else
-            {
-                btnDeleteRental.Enabled = true;
             }
             calculateTotalPrice();
             if (rent != null)
@@ -184,6 +191,7 @@ namespace RentACar
                 dtpTo.Enabled = true;
                 btnAddRental.Enabled = true;
                 btnRentalHistory.Enabled = true;
+                btnAddRental.Enabled = true;
             }
         }
 
@@ -283,6 +291,102 @@ namespace RentACar
                 MessageBox.Show("Селектирајте клиент од листата со клиенти", "Историја на изнајмувања", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void getCheapest()
+        {
+            int min = 100000;
+            Car temp = new Car();
+            if (lbCars.Items.Count > 0)
+            {
+                foreach (Car car in lbCars.Items)
+                {
+                    if (car.PricePerDay < min)
+                    {
+                        temp = car;
+                        min = car.PricePerDay;
+                    }
+                }
+                tbCheapest.Text = temp.ToString();
+            }
+            else tbCheapest.Text = "";
+        }
+
+        private void getMostExpensive()
+        {
+            int max = 0;
+            Car temp = new Car();
+            if (lbCars.Items.Count > 0)
+            {
+                foreach (Car car in lbCars.Items)
+                {
+                    if (car.PricePerDay > max)
+                    {
+                        temp = car;
+                        max = car.PricePerDay;
+                    }
+                }
+                tbMostExpensive.Text = temp.ToString();
+            }
+            else tbMostExpensive.Text = "";
+        }
+
+        private void maxRent()
+        {
+            int max = 0;
+            Rent temp = new Rent();
+            if (lbRentals.Items.Count > 0)
+            {
+                foreach (Rent rent in lbRentals.Items)
+                {
+                    if (rent.TotalPrice > max)
+                    {
+                        temp = rent;
+                        max = rent.TotalPrice;
+                    }
+                }
+                tbMaxRent.Text = max.ToString();
+            }
+            else tbMaxRent.Text = "";
+        }
+
+        private void minRent()
+        {
+            int min = 100000;
+            Rent temp = new Rent();
+            if (lbRentals.Items.Count > 0)
+            {
+                foreach (Rent rent in lbRentals.Items)
+                {
+                    if (rent.TotalPrice < min)
+                    {
+                        temp = rent;
+                        min = rent.TotalPrice;
+                    }
+                }
+                tbMinRent.Text = min.ToString();
+            }
+            else tbMinRent.Text = "";
+        }
+
+        private void avgRent()
+        {
+            int totalRents = 0;
+            if (lbRentals.Items.Count > 0)
+            {
+                foreach (Rent rent in lbRentals.Items)
+                {
+                    totalRents += rent.TotalPrice;
+                }
+                tbAvgRent.Text = (totalRents / lbRentals.Items.Count).ToString();
+            }
+            else tbAvgRent.Text = "";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            getCheapest();
+            getMostExpensive();
         }
     }
 }

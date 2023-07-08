@@ -12,6 +12,8 @@ namespace RentACar.Models
         public int PricePerDay { get; set; }
         public bool IsAvailable { get; set; }
 
+        public Car() { }
+
         public Car(string id,string brand, string model, string year, int mileage, int pricePerDay, bool isAvailable)
         {
             Id = id;

@@ -24,12 +24,7 @@ namespace RentACar
 
         private void btnSaveCar_Click(object sender, EventArgs e)
         {
-            bool ifChecked = false;
-            if (cbAvailable.Checked)
-            {
-                ifChecked = true;
-            }
-            Car = new Car(tbId.Text.Trim(), tbCarBrand.Text.Trim(), tbCarModel.Text.Trim(), tbYear.Text.Trim(), Int32.Parse(tbMileage.Text.Trim()), Int32.Parse(tbPrice.Text.Trim()), ifChecked);
+            Car = new Car(tbId.Text.Trim(), tbCarBrand.Text.Trim(), tbCarModel.Text.Trim(), tbYear.Text.Trim(), Int32.Parse(tbMileage.Text.Trim()), Int32.Parse(tbPrice.Text.Trim()), true);
             DialogResult = DialogResult.OK;
         }
 

@@ -41,7 +41,6 @@
             label2 = new Label();
             btnSaveCar = new Button();
             btnCancel = new Button();
-            cbAvailable = new CheckBox();
             tbId = new TextBox();
             lbId = new Label();
             errorProvider1 = new ErrorProvider(components);
@@ -148,7 +147,7 @@
             // btnSaveCar
             // 
             btnSaveCar.Enabled = false;
-            btnSaveCar.Location = new Point(6, 551);
+            btnSaveCar.Location = new Point(6, 512);
             btnSaveCar.Margin = new Padding(3, 4, 3, 4);
             btnSaveCar.Name = "btnSaveCar";
             btnSaveCar.Size = new Size(114, 39);
@@ -159,7 +158,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(167, 551);
+            btnCancel.Location = new Point(167, 512);
             btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(114, 39);
@@ -167,17 +166,6 @@
             btnCancel.Text = "Откажи";
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
-            // 
-            // cbAvailable
-            // 
-            cbAvailable.AutoSize = true;
-            cbAvailable.Location = new Point(6, 503);
-            cbAvailable.Margin = new Padding(3, 4, 3, 4);
-            cbAvailable.Name = "cbAvailable";
-            cbAvailable.Size = new Size(97, 24);
-            cbAvailable.TabIndex = 14;
-            cbAvailable.Text = "Достапна";
-            cbAvailable.UseVisualStyleBackColor = true;
             // 
             // tbId
             // 
@@ -208,7 +196,6 @@
             groupBox1.Controls.Add(lbId);
             groupBox1.Controls.Add(tbCarBrand);
             groupBox1.Controls.Add(tbCarModel);
-            groupBox1.Controls.Add(cbAvailable);
             groupBox1.Controls.Add(tbYear);
             groupBox1.Controls.Add(btnCancel);
             groupBox1.Controls.Add(lbBrand);
@@ -221,7 +208,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(34, 22);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(318, 599);
+            groupBox1.Size = new Size(318, 580);
             groupBox1.TabIndex = 17;
             groupBox1.TabStop = false;
             groupBox1.Text = "Додади нов автомобил";
@@ -230,7 +217,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(395, 672);
+            ClientSize = new Size(395, 628);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "NewCar";
@@ -255,7 +242,6 @@
         private Label label2;
         private Button btnSaveCar;
         private Button btnCancel;
-        private CheckBox cbAvailable;
         private TextBox tbId;
         private Label lbId;
         private ErrorProvider errorProvider1;
