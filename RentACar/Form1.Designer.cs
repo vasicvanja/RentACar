@@ -33,6 +33,7 @@
             btnDeleteCar = new Button();
             btnAddCar = new Button();
             groupBox2 = new GroupBox();
+            btnHistoryOfRentals = new Button();
             btnDeleteClient = new Button();
             btnAddClient = new Button();
             lbCustomers = new ListBox();
@@ -41,7 +42,6 @@
             btnDeleteRental = new Button();
             btnAddRental = new Button();
             lbRentals = new ListBox();
-            btnHistoryOfRentals = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -105,6 +105,16 @@
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Клиенти";
+            // 
+            // btnHistoryOfRentals
+            // 
+            btnHistoryOfRentals.Location = new Point(6, 617);
+            btnHistoryOfRentals.Margin = new Padding(3, 4, 3, 4);
+            btnHistoryOfRentals.Name = "btnHistoryOfRentals";
+            btnHistoryOfRentals.Size = new Size(348, 31);
+            btnHistoryOfRentals.TabIndex = 3;
+            btnHistoryOfRentals.Text = "Историја на изнајмувања";
+            btnHistoryOfRentals.UseVisualStyleBackColor = true;
             // 
             // btnDeleteClient
             // 
@@ -192,16 +202,6 @@
             lbRentals.Name = "lbRentals";
             lbRentals.Size = new Size(348, 464);
             lbRentals.TabIndex = 0;
-            // 
-            // btnHistoryOfRentals
-            // 
-            btnHistoryOfRentals.Location = new Point(6, 617);
-            btnHistoryOfRentals.Margin = new Padding(3, 4, 3, 4);
-            btnHistoryOfRentals.Name = "btnHistoryOfRentals";
-            btnHistoryOfRentals.Size = new Size(342, 31);
-            btnHistoryOfRentals.TabIndex = 3;
-            btnHistoryOfRentals.Text = "Историја на изнајмувања";
-            btnHistoryOfRentals.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
