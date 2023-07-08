@@ -6,6 +6,7 @@
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Address { get; set; }
+        public List<Rent> Rentals { get; set; }
 
         public Customer() { }
 
@@ -15,6 +16,7 @@
             Name = name;
             Surname = surname;
             Address = address;
+            Rentals = new List<Rent>();
         }
 
         public override string? ToString()

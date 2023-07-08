@@ -70,9 +70,11 @@
             gbDetails.Controls.Add(lbRentPrice);
             gbDetails.Controls.Add(groupBox2);
             gbDetails.Controls.Add(groupBox1);
-            gbDetails.Location = new Point(32, -21);
+            gbDetails.Location = new Point(39, 23);
+            gbDetails.Margin = new Padding(3, 4, 3, 4);
             gbDetails.Name = "gbDetails";
-            gbDetails.Size = new Size(736, 492);
+            gbDetails.Padding = new Padding(3, 4, 3, 4);
+            gbDetails.Size = new Size(841, 656);
             gbDetails.TabIndex = 1;
             gbDetails.TabStop = false;
             gbDetails.Text = "Детали";
@@ -83,46 +85,48 @@
             groupBox4.Controls.Add(label9);
             groupBox4.Controls.Add(lbRentEndDate);
             groupBox4.Controls.Add(lbRentStartDate);
-            groupBox4.Location = new Point(415, 261);
+            groupBox4.Location = new Point(474, 348);
+            groupBox4.Margin = new Padding(3, 4, 3, 4);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(246, 207);
+            groupBox4.Padding = new Padding(3, 4, 3, 4);
+            groupBox4.Size = new Size(281, 276);
             groupBox4.TabIndex = 14;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Датуми на рентање:";
+            groupBox4.Text = "Датуми на изнајмување:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 28);
+            label4.Location = new Point(7, 37);
             label4.Name = "label4";
-            label4.Size = new Size(123, 15);
+            label4.Size = new Size(155, 20);
             label4.TabIndex = 8;
             label4.Text = "Почеток на рентање:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(7, 121);
+            label9.Location = new Point(8, 161);
             label9.Name = "label9";
-            label9.Size = new Size(99, 15);
+            label9.Size = new Size(127, 20);
             label9.TabIndex = 12;
             label9.Text = "Крај на рентање:";
             // 
             // lbRentEndDate
             // 
             lbRentEndDate.AutoSize = true;
-            lbRentEndDate.Location = new Point(7, 151);
+            lbRentEndDate.Location = new Point(8, 201);
             lbRentEndDate.Name = "lbRentEndDate";
-            lbRentEndDate.Size = new Size(86, 15);
+            lbRentEndDate.Size = new Size(108, 20);
             lbRentEndDate.TabIndex = 11;
             lbRentEndDate.Text = "Километража:";
             // 
             // lbRentStartDate
             // 
             lbRentStartDate.AutoSize = true;
-            lbRentStartDate.Location = new Point(6, 54);
+            lbRentStartDate.Location = new Point(7, 72);
             lbRentStartDate.Name = "lbRentStartDate";
-            lbRentStartDate.Size = new Size(86, 15);
+            lbRentStartDate.Size = new Size(108, 20);
             lbRentStartDate.TabIndex = 10;
             lbRentStartDate.Text = "Километража:";
             // 
@@ -132,9 +136,11 @@
             groupBox3.Controls.Add(lbTotalPrice);
             groupBox3.Controls.Add(label11);
             groupBox3.Controls.Add(label1);
-            groupBox3.Location = new Point(415, 40);
+            groupBox3.Location = new Point(474, 53);
+            groupBox3.Margin = new Padding(3, 4, 3, 4);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(246, 196);
+            groupBox3.Padding = new Padding(3, 4, 3, 4);
+            groupBox3.Size = new Size(281, 261);
             groupBox3.TabIndex = 13;
             groupBox3.TabStop = false;
             groupBox3.Text = "Информации за цена:";
@@ -142,53 +148,53 @@
             // lbPriceForDay
             // 
             lbPriceForDay.AutoSize = true;
-            lbPriceForDay.Location = new Point(20, 63);
+            lbPriceForDay.Location = new Point(23, 84);
             lbPriceForDay.Name = "lbPriceForDay";
-            lbPriceForDay.Size = new Size(86, 15);
+            lbPriceForDay.Size = new Size(108, 20);
             lbPriceForDay.TabIndex = 15;
             lbPriceForDay.Text = "Матичен број:";
             // 
             // lbTotalPrice
             // 
             lbTotalPrice.AutoSize = true;
-            lbTotalPrice.Location = new Point(20, 150);
+            lbTotalPrice.Location = new Point(23, 200);
             lbTotalPrice.Name = "lbTotalPrice";
-            lbTotalPrice.Size = new Size(86, 15);
+            lbTotalPrice.Size = new Size(108, 20);
             lbTotalPrice.TabIndex = 14;
             lbTotalPrice.Text = "Матичен број:";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(20, 113);
+            label11.Location = new Point(23, 151);
             label11.Name = "label11";
-            label11.Size = new Size(78, 15);
+            label11.Size = new Size(99, 20);
             label11.TabIndex = 7;
             label11.Text = "Вкупна цена:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(20, 28);
+            label1.Location = new Point(23, 37);
             label1.Name = "label1";
-            label1.Size = new Size(102, 15);
+            label1.Size = new Size(133, 20);
             label1.TabIndex = 6;
             label1.Text = "Цена за еден ден:";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(429, 289);
+            label8.Location = new Point(490, 385);
             label8.Name = "label8";
-            label8.Size = new Size(0, 15);
+            label8.Size = new Size(0, 20);
             label8.TabIndex = 9;
             // 
             // lbRentPrice
             // 
             lbRentPrice.AutoSize = true;
-            lbRentPrice.Location = new Point(429, 68);
+            lbRentPrice.Location = new Point(490, 91);
             lbRentPrice.Name = "lbRentPrice";
-            lbRentPrice.Size = new Size(0, 15);
+            lbRentPrice.Size = new Size(0, 20);
             lbRentPrice.TabIndex = 7;
             // 
             // groupBox2
@@ -201,9 +207,11 @@
             groupBox2.Controls.Add(lbCarBrand);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label10);
-            groupBox2.Location = new Point(37, 261);
+            groupBox2.Location = new Point(42, 348);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(334, 207);
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(382, 276);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Информации за автомобилот:";
@@ -211,69 +219,69 @@
             // lbCarYear
             // 
             lbCarYear.AutoSize = true;
-            lbCarYear.Location = new Point(163, 151);
+            lbCarYear.Location = new Point(186, 201);
             lbCarYear.Name = "lbCarYear";
-            lbCarYear.Size = new Size(0, 15);
+            lbCarYear.Size = new Size(0, 20);
             lbCarYear.TabIndex = 8;
             // 
             // lbCarMileage
             // 
             lbCarMileage.AutoSize = true;
-            lbCarMileage.Location = new Point(163, 63);
+            lbCarMileage.Location = new Point(186, 84);
             lbCarMileage.Name = "lbCarMileage";
-            lbCarMileage.Size = new Size(0, 15);
+            lbCarMileage.Size = new Size(0, 20);
             lbCarMileage.TabIndex = 7;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(19, 103);
+            label6.Location = new Point(22, 137);
             label6.Name = "label6";
-            label6.Size = new Size(47, 15);
+            label6.Size = new Size(58, 20);
             label6.TabIndex = 6;
             label6.Text = "Mодел:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(163, 28);
+            label7.Location = new Point(186, 37);
             label7.Name = "label7";
-            label7.Size = new Size(86, 15);
+            label7.Size = new Size(108, 20);
             label7.TabIndex = 5;
             label7.Text = "Километража:";
             // 
             // lbCarModel
             // 
             lbCarModel.AutoSize = true;
-            lbCarModel.Location = new Point(24, 151);
+            lbCarModel.Location = new Point(27, 201);
             lbCarModel.Name = "lbCarModel";
-            lbCarModel.Size = new Size(0, 15);
+            lbCarModel.Size = new Size(0, 20);
             lbCarModel.TabIndex = 4;
             lbCarModel.TextAlign = ContentAlignment.TopCenter;
             // 
             // lbCarBrand
             // 
             lbCarBrand.AutoSize = true;
-            lbCarBrand.Location = new Point(21, 63);
+            lbCarBrand.Location = new Point(24, 84);
             lbCarBrand.Name = "lbCarBrand";
-            lbCarBrand.Size = new Size(0, 15);
+            lbCarBrand.Size = new Size(0, 20);
             lbCarBrand.TabIndex = 3;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(16, 28);
+            label5.Location = new Point(18, 37);
             label5.Name = "label5";
-            label5.Size = new Size(91, 15);
+            label5.Size = new Size(116, 20);
             label5.TabIndex = 1;
             label5.Text = "Бренд и модел:";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(163, 103);
+            label10.Location = new Point(186, 137);
             label10.Name = "label10";
-            label10.Size = new Size(144, 15);
+            label10.Size = new Size(185, 20);
             label10.TabIndex = 2;
             label10.Text = "Година на производство:";
             // 
@@ -283,9 +291,11 @@
             groupBox1.Controls.Add(lbClientName);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(37, 40);
+            groupBox1.Location = new Point(42, 53);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(334, 196);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(382, 261);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Информации за клиент:";
@@ -293,45 +303,46 @@
             // lbClientNumber
             // 
             lbClientNumber.AutoSize = true;
-            lbClientNumber.Location = new Point(24, 131);
+            lbClientNumber.Location = new Point(27, 175);
             lbClientNumber.Name = "lbClientNumber";
-            lbClientNumber.Size = new Size(0, 15);
+            lbClientNumber.Size = new Size(0, 20);
             lbClientNumber.TabIndex = 4;
             // 
             // lbClientName
             // 
             lbClientName.AutoSize = true;
-            lbClientName.Location = new Point(21, 63);
+            lbClientName.Location = new Point(24, 84);
             lbClientName.Name = "lbClientName";
-            lbClientName.Size = new Size(0, 15);
+            lbClientName.Size = new Size(0, 20);
             lbClientName.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(16, 28);
+            label2.Location = new Point(18, 37);
             label2.Name = "label2";
-            label2.Size = new Size(94, 15);
+            label2.Size = new Size(120, 20);
             label2.TabIndex = 1;
             label2.Text = "Име и презиме:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(16, 99);
+            label3.Location = new Point(18, 132);
             label3.Name = "label3";
-            label3.Size = new Size(86, 15);
+            label3.Size = new Size(108, 20);
             label3.TabIndex = 2;
             label3.Text = "Матичен број:";
             // 
             // RentalDetails
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(829, 503);
+            ClientSize = new Size(904, 717);
             Controls.Add(gbDetails);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "RentalDetails";
-            Text = "RentalDetails";
+            Text = "Детали за изнајмување";
             Load += RentalDetails_Load;
             gbDetails.ResumeLayout(false);
             gbDetails.PerformLayout();

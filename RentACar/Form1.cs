@@ -7,6 +7,8 @@ namespace RentACar
         public Form1()
         {
             InitializeComponent();
+            dtpFrom.MinDate = DateTime.Now;
+            dtpTo.MinDate = DateTime.Now;
             lbCars.Items.Add(new Car("1", "BMW", "520", "2023", 1000, 200, true));
             lbCustomers.Items.Add(new Customer("1", "Vanja", "Vasic", "bul. V. S. Bato 28/28"));
         }
@@ -116,6 +118,7 @@ namespace RentACar
                 {
                     rental.TotalPrice = int.Parse(tbTotalPrice.Text);
                     lbRentals.Items.Add(rental);
+                    rental.Customer.Rentals.Add(rental);
                     calculateTotalEarning();
                     lbCars.SelectedItems.Clear();
                     lbCustomers.SelectedItems.Clear();
@@ -180,6 +183,7 @@ namespace RentACar
                 dtpFrom.Enabled = true;
                 dtpTo.Enabled = true;
                 btnAddRental.Enabled = true;
+                btnRentalHistory.Enabled = true;
             }
         }
 
@@ -238,7 +242,7 @@ namespace RentACar
         public void calculateTotalEarning()
         {
             int total = 0;
-            foreach(Rent rent in lbRentals.Items)
+            foreach (Rent rent in lbRentals.Items)
             {
                 total += rent.TotalPrice;
             }
@@ -259,6 +263,24 @@ namespace RentACar
             else
             {
                 MessageBox.Show("Селектирајте ставка од листата за активни рентирања", "Избриши клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void btnRentalHistory_Click(object sender, EventArgs e)
+        {
+            if (lbCustomers.SelectedIndex != -1)
+            {
+                Customer selectedCustomer = lbCustomers.SelectedItem as Customer;
+                RentalHistory rentalHistory = new RentalHistory(selectedCustomer);
+                if (rentalHistory.ShowDialog() == DialogResult.OK)
+                {
+                    lbCustomers.SelectedItems.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Селектирајте клиент од листата со клиенти", "Историја на изнајмувања", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

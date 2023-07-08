@@ -20,6 +20,7 @@ namespace RentACar
             Customer.Name = tbName.Text;
             Customer.Surname = tbSurname.Text;
             Customer.Address = tbAddress.Text;
+            Customer.Rentals = new List<Rent>();
             DialogResult = DialogResult.OK;
         }
 
