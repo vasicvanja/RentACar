@@ -40,7 +40,7 @@
             groupBox3 = new GroupBox();
             dtpTo = new DateTimePicker();
             dtpFrom = new DateTimePicker();
-            tbTotal = new TextBox();
+            tbTotalPrice = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -166,7 +166,7 @@
             // 
             groupBox3.Controls.Add(dtpTo);
             groupBox3.Controls.Add(dtpFrom);
-            groupBox3.Controls.Add(tbTotal);
+            groupBox3.Controls.Add(tbTotalPrice);
             groupBox3.Controls.Add(label3);
             groupBox3.Controls.Add(label2);
             groupBox3.Controls.Add(label1);
@@ -190,6 +190,7 @@
             dtpTo.Name = "dtpTo";
             dtpTo.Size = new Size(262, 27);
             dtpTo.TabIndex = 9;
+            dtpTo.ValueChanged += dtpTo_ValueChanged;
             // 
             // dtpFrom
             // 
@@ -198,14 +199,15 @@
             dtpFrom.Name = "dtpFrom";
             dtpFrom.Size = new Size(262, 27);
             dtpFrom.TabIndex = 4;
+            dtpFrom.ValueChanged += dtpFrom_ValueChanged;
             // 
-            // tbTotal
+            // tbTotalPrice
             // 
-            tbTotal.Enabled = false;
-            tbTotal.Location = new Point(135, 757);
-            tbTotal.Name = "tbTotal";
-            tbTotal.Size = new Size(262, 27);
-            tbTotal.TabIndex = 8;
+            tbTotalPrice.Enabled = false;
+            tbTotalPrice.Location = new Point(135, 757);
+            tbTotalPrice.Name = "tbTotalPrice";
+            tbTotalPrice.Size = new Size(262, 27);
+            tbTotalPrice.TabIndex = 8;
             // 
             // label3
             // 
@@ -236,6 +238,7 @@
             // 
             // btnDetails
             // 
+            btnDetails.Enabled = false;
             btnDetails.Location = new Point(6, 617);
             btnDetails.Margin = new Padding(3, 5, 3, 5);
             btnDetails.Name = "btnDetails";
@@ -258,6 +261,7 @@
             // 
             // btnAddRental
             // 
+            btnAddRental.Enabled = false;
             btnAddRental.Location = new Point(6, 509);
             btnAddRental.Margin = new Padding(3, 4, 3, 4);
             btnAddRental.Name = "btnAddRental";
@@ -319,7 +323,7 @@
         private Button btnDetails;
         private FileSystemWatcher fileSystemWatcher1;
         private Button btnHistoryOfRentals;
-        private TextBox tbTotal;
+        private TextBox tbTotalPrice;
         private Label label3;
         private Label label2;
         private Label label1;
