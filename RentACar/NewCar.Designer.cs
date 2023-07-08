@@ -85,27 +85,27 @@
             lbBrand.AutoSize = true;
             lbBrand.Location = new Point(6, 99);
             lbBrand.Name = "lbBrand";
-            lbBrand.Size = new Size(52, 20);
+            lbBrand.Size = new Size(55, 20);
             lbBrand.TabIndex = 3;
-            lbBrand.Text = "Бренд";
+            lbBrand.Text = "Бренд:";
             // 
             // lbModel
             // 
             lbModel.AutoSize = true;
             lbModel.Location = new Point(6, 172);
             lbModel.Name = "lbModel";
-            lbModel.Size = new Size(55, 20);
+            lbModel.Size = new Size(58, 20);
             lbModel.TabIndex = 4;
-            lbModel.Text = "Модел";
+            lbModel.Text = "Модел:";
             // 
             // lbYear
             // 
             lbYear.AutoSize = true;
             lbYear.Location = new Point(6, 248);
             lbYear.Name = "lbYear";
-            lbYear.Size = new Size(59, 20);
+            lbYear.Size = new Size(62, 20);
             lbYear.TabIndex = 5;
-            lbYear.Text = "Година";
+            lbYear.Text = "Година:";
             // 
             // tbMileage
             // 
@@ -122,10 +122,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(6, 333);
             label1.Name = "label1";
-            label1.Size = new Size(105, 20);
+            label1.Size = new Size(108, 20);
             label1.TabIndex = 7;
-            label1.Text = "Километража";
-            label1.Click += label1_Click;
+            label1.Text = "Километража:";
             // 
             // tbPrice
             // 
@@ -142,9 +141,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(6, 420);
             label2.Name = "label2";
-            label2.Size = new Size(209, 20);
+            label2.Size = new Size(253, 20);
             label2.TabIndex = 9;
-            label2.Text = "Цена за изнајмување на ден";
+            label2.Text = "Цена за изнајмување на ден (EUR):";
             // 
             // btnSaveCar
             // 
@@ -157,7 +156,6 @@
             btnSaveCar.Text = "Додади";
             btnSaveCar.UseVisualStyleBackColor = true;
             btnSaveCar.Click += btnSaveCar_Click;
-            btnSaveCar.Validating += btnSaveCar_Validating;
             // 
             // btnCancel
             // 
@@ -196,9 +194,9 @@
             lbId.AutoSize = true;
             lbId.Location = new Point(6, 28);
             lbId.Name = "lbId";
-            lbId.Size = new Size(170, 20);
+            lbId.Size = new Size(173, 20);
             lbId.TabIndex = 16;
-            lbId.Text = "Идентификациски број";
+            lbId.Text = "Идентификациски број:";
             // 
             // errorProvider1
             // 
@@ -237,7 +235,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "NewCar";
             Text = "Нов автомобил";
-            Load += NewCar_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

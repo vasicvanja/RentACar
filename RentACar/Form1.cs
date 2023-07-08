@@ -37,7 +37,7 @@ namespace RentACar
             }
             else
             {
-                MessageBox.Show("Селектирајте автомобил од листата на автомобили кој сакате да го избришете!", "Избриши автомобил", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Селектирајте автомобил од листата на автомобили којшто сакате да го избришете!", "Избриши автомобил", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -45,6 +45,7 @@ namespace RentACar
 
         private void lbCars_SelectedIndexChanged(object sender, EventArgs e)
         {
+            handleFromToTextBoxes();
             if (lbCars.Items.Count == 0)
             {
                 btnDeleteCar.Enabled = false;
@@ -87,6 +88,7 @@ namespace RentACar
 
         private void lbCustomers_SelectedIndexChanged(object sender, EventArgs e)
         {
+            handleFromToTextBoxes();
             if (lbCustomers.Items.Count == 0)
             {
                 btnDeleteClient.Enabled = false;
@@ -94,6 +96,48 @@ namespace RentACar
             else
             {
                 btnDeleteClient.Enabled = true;
+            }
+        }
+
+        private void btnAddRental_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteRental_Click(object sender, EventArgs e)
+        {
+            if (lbRentals.SelectedIndex != -1)
+            {
+                if (MessageBox.Show("Дали сте сигурни дека сакате да го избришете ова изнајмување?", "Избриши изнајмување", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    lbRentals.Items.RemoveAt(lbRentals.SelectedIndex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Селектирајте го изнајмувањето од листата на клиенти кое што сакате да го избришете!", "Избриши изнајмување", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void lbRentals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbRentals.Items.Count == 0)
+            {
+                btnDeleteRental.Enabled = false;
+            }
+            else
+            {
+                btnDeleteRental.Enabled = true;
+            }
+        }
+
+        private void handleFromToTextBoxes()
+        {
+            if (lbCars.SelectedIndex != -1 && lbCustomers.SelectedIndex != -1)
+            {
+                dtpFrom.Enabled = true;
+                dtpTo.Enabled = true;
             }
         }
     }

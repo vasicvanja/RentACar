@@ -16,21 +16,10 @@ namespace RentACar
     public partial class NewCar : Form
     {
         public Car Car { get; set; }
-        public Form1 Form1 { get; set; }
 
         public NewCar()
         {
             InitializeComponent();
-        }
-
-        private void NewCar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSaveCar_Click(object sender, EventArgs e)
@@ -139,11 +128,6 @@ namespace RentACar
             {
                 errorProvider1.SetError(tbPrice, "Цената на изнајмување мора да биде број");
             }
-        }
-
-        private void btnSaveCar_Validating(object sender, CancelEventArgs e)
-        {
-
         }
 
         private void tbCarModel_TextChanged(object sender, EventArgs e)

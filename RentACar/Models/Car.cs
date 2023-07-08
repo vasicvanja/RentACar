@@ -25,7 +25,7 @@ namespace RentACar.Models
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2} {3} {4}km {5}eur - {6}",Id, Brand, Model, Year, Mileage, Price, IsAvailable ? "Достапна" : "Недостапна");
+            return string.Format("{0} {1} {2} {3} {4} KM {5} EUR - {6}", Id, Brand, Model, Year, Mileage, Price, IsAvailable ? "Достапна" : "Недостапна");
         }
     }
 }
