@@ -33,9 +33,10 @@
             btnDeleteCar = new Button();
             btnAddCar = new Button();
             groupBox2 = new GroupBox();
+            btnHistoryOfRentals = new Button();
             btnDeleteClient = new Button();
             btnAddClient = new Button();
-            lbClients = new ListBox();
+            lbCustomers = new ListBox();
             groupBox3 = new GroupBox();
             btnDetails = new Button();
             btnDeleteRental = new Button();
@@ -93,15 +94,29 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnHistoryOfRentals);
             groupBox2.Controls.Add(btnDeleteClient);
             groupBox2.Controls.Add(btnAddClient);
             groupBox2.Controls.Add(lbClients);
             groupBox2.Location = new Point(394, 29);
+            groupBox2.Controls.Add(lbCustomers);
+            groupBox2.Location = new Point(450, 39);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(315, 502);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Клиенти";
+            // 
+            // btnHistoryOfRentals
+            // 
+            btnHistoryOfRentals.Location = new Point(6, 617);
+            btnHistoryOfRentals.Margin = new Padding(3, 4, 3, 4);
+            btnHistoryOfRentals.Name = "btnHistoryOfRentals";
+            btnHistoryOfRentals.Size = new Size(348, 31);
+            btnHistoryOfRentals.TabIndex = 3;
+            btnHistoryOfRentals.Text = "Историја на изнајмувања";
+            btnHistoryOfRentals.UseVisualStyleBackColor = true;
             // 
             // btnDeleteClient
             // 
@@ -111,6 +126,7 @@
             btnDeleteClient.TabIndex = 2;
             btnDeleteClient.Text = "Избриши клиент";
             btnDeleteClient.UseVisualStyleBackColor = true;
+            btnDeleteClient.Click += btnDeleteClient_Click;
             // 
             // btnAddClient
             // 
@@ -120,8 +136,9 @@
             btnAddClient.TabIndex = 1;
             btnAddClient.Text = "Додади клиент";
             btnAddClient.UseVisualStyleBackColor = true;
+            btnAddClient.Click += btnAddClient_Click;
             // 
-            // lbClients
+            // lbCustomers
             // 
             lbClients.FormattingEnabled = true;
             lbClients.ItemHeight = 15;
@@ -129,6 +146,13 @@
             lbClients.Name = "lbClients";
             lbClients.Size = new Size(305, 349);
             lbClients.TabIndex = 0;
+            lbCustomers.FormattingEnabled = true;
+            lbCustomers.ItemHeight = 20;
+            lbCustomers.Location = new Point(6, 28);
+            lbCustomers.Margin = new Padding(3, 4, 3, 4);
+            lbCustomers.Name = "lbCustomers";
+            lbCustomers.Size = new Size(348, 464);
+            lbCustomers.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -141,7 +165,17 @@
             groupBox3.Size = new Size(315, 502);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Клиенти";
+            groupBox3.Text = "Изнајмувања";
+            // 
+            // btnDetails
+            // 
+            btnDetails.Location = new Point(6, 617);
+            btnDetails.Margin = new Padding(3, 4, 3, 4);
+            btnDetails.Name = "btnDetails";
+            btnDetails.Size = new Size(348, 31);
+            btnDetails.TabIndex = 3;
+            btnDetails.Text = "Детали за изнајмување";
+            btnDetails.UseVisualStyleBackColor = true;
             // 
             // btnDetails
             // 
@@ -189,11 +223,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1418, 595);
+            ClientSize = new Size(1280, 749);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Rent a Car";
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
@@ -210,12 +245,13 @@
         private GroupBox groupBox2;
         private Button btnDeleteClient;
         private Button btnAddClient;
-        private ListBox lbClients;
+        private ListBox lbCustomers;
         private GroupBox groupBox3;
         private Button btnDeleteRental;
         private Button btnAddRental;
         private ListBox lbRentals;
         private Button btnDetails;
         private FileSystemWatcher fileSystemWatcher1;
+        private Button btnHistoryOfRentals;
     }
 }

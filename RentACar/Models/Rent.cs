@@ -7,6 +7,8 @@
         public Customer Customer { get; set; }
         public Car Car { get; set; }
 
+        public Rent() { }
+
         public Rent(DateTime from, DateTime to, Customer customer, Car car)
         {
             From = from;
