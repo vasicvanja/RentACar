@@ -232,5 +232,23 @@ namespace RentACar
                 }
             }
         }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            if (lbRentals.SelectedIndex != -1)
+            {
+                Rent selectedRental = lbRentals.Items[lbRentals.SelectedIndex] as Rent;
+                RentalDetails rentalDetails = new RentalDetails(selectedRental);
+                if (rentalDetails.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Селектирајте ставка од листата за активни рентирања", "Избриши клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }
