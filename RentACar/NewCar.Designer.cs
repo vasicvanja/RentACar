@@ -45,32 +45,37 @@
             tbId = new TextBox();
             lbId = new Label();
             errorProvider1 = new ErrorProvider(components);
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // tbCarBrand
             // 
-            tbCarBrand.Location = new Point(43, 119);
+            tbCarBrand.Location = new Point(6, 123);
+            tbCarBrand.Margin = new Padding(3, 4, 3, 4);
             tbCarBrand.Name = "tbCarBrand";
-            tbCarBrand.Size = new Size(241, 23);
+            tbCarBrand.Size = new Size(275, 27);
             tbCarBrand.TabIndex = 0;
             tbCarBrand.TextChanged += tbCarBrand_TextChanged;
             tbCarBrand.Validating += carBrand_Validating;
             // 
             // tbCarModel
             // 
-            tbCarModel.Location = new Point(43, 184);
+            tbCarModel.Location = new Point(6, 196);
+            tbCarModel.Margin = new Padding(3, 4, 3, 4);
             tbCarModel.Name = "tbCarModel";
-            tbCarModel.Size = new Size(241, 23);
+            tbCarModel.Size = new Size(275, 27);
             tbCarModel.TabIndex = 1;
             tbCarModel.TextChanged += tbCarModel_TextChanged;
             tbCarModel.Validating += tbCarModel_Validating;
             // 
             // tbYear
             // 
-            tbYear.Location = new Point(43, 253);
+            tbYear.Location = new Point(6, 272);
+            tbYear.Margin = new Padding(3, 4, 3, 4);
             tbYear.Name = "tbYear";
-            tbYear.Size = new Size(241, 23);
+            tbYear.Size = new Size(275, 27);
             tbYear.TabIndex = 2;
             tbYear.TextChanged += tbYear_TextChanged;
             tbYear.Validating += tbYear_Validating;
@@ -78,35 +83,36 @@
             // lbBrand
             // 
             lbBrand.AutoSize = true;
-            lbBrand.Location = new Point(43, 90);
+            lbBrand.Location = new Point(6, 99);
             lbBrand.Name = "lbBrand";
-            lbBrand.Size = new Size(40, 15);
+            lbBrand.Size = new Size(52, 20);
             lbBrand.TabIndex = 3;
             lbBrand.Text = "Бренд";
             // 
             // lbModel
             // 
             lbModel.AutoSize = true;
-            lbModel.Location = new Point(43, 156);
+            lbModel.Location = new Point(6, 172);
             lbModel.Name = "lbModel";
-            lbModel.Size = new Size(44, 15);
+            lbModel.Size = new Size(55, 20);
             lbModel.TabIndex = 4;
             lbModel.Text = "Модел";
             // 
             // lbYear
             // 
             lbYear.AutoSize = true;
-            lbYear.Location = new Point(43, 224);
+            lbYear.Location = new Point(6, 248);
             lbYear.Name = "lbYear";
-            lbYear.Size = new Size(46, 15);
+            lbYear.Size = new Size(59, 20);
             lbYear.TabIndex = 5;
             lbYear.Text = "Година";
             // 
             // tbMileage
             // 
-            tbMileage.Location = new Point(42, 323);
+            tbMileage.Location = new Point(6, 357);
+            tbMileage.Margin = new Padding(3, 4, 3, 4);
             tbMileage.Name = "tbMileage";
-            tbMileage.Size = new Size(237, 23);
+            tbMileage.Size = new Size(275, 27);
             tbMileage.TabIndex = 6;
             tbMileage.TextChanged += tbMileage_TextChanged;
             tbMileage.Validating += tbMileage_Validating;
@@ -114,18 +120,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(42, 292);
+            label1.Location = new Point(6, 333);
             label1.Name = "label1";
-            label1.Size = new Size(83, 15);
+            label1.Size = new Size(105, 20);
             label1.TabIndex = 7;
             label1.Text = "Километража";
             label1.Click += label1_Click;
             // 
             // tbPrice
             // 
-            tbPrice.Location = new Point(42, 406);
+            tbPrice.Location = new Point(6, 444);
+            tbPrice.Margin = new Padding(3, 4, 3, 4);
             tbPrice.Name = "tbPrice";
-            tbPrice.Size = new Size(237, 23);
+            tbPrice.Size = new Size(275, 27);
             tbPrice.TabIndex = 8;
             tbPrice.TextChanged += tbPrice_TextChanged;
             tbPrice.Validating += tbPrice_Validating;
@@ -133,18 +140,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(42, 373);
+            label2.Location = new Point(6, 420);
             label2.Name = "label2";
-            label2.Size = new Size(161, 15);
+            label2.Size = new Size(209, 20);
             label2.TabIndex = 9;
             label2.Text = "Цена за изнајмување на ден";
             // 
             // btnSaveCar
             // 
             btnSaveCar.Enabled = false;
-            btnSaveCar.Location = new Point(42, 502);
+            btnSaveCar.Location = new Point(6, 551);
+            btnSaveCar.Margin = new Padding(3, 4, 3, 4);
             btnSaveCar.Name = "btnSaveCar";
-            btnSaveCar.Size = new Size(75, 23);
+            btnSaveCar.Size = new Size(114, 39);
             btnSaveCar.TabIndex = 10;
             btnSaveCar.Text = "Додади";
             btnSaveCar.UseVisualStyleBackColor = true;
@@ -153,9 +161,10 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(43, 550);
+            btnCancel.Location = new Point(167, 551);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(75, 23);
+            btnCancel.Size = new Size(114, 39);
             btnCancel.TabIndex = 11;
             btnCancel.Text = "Откажи";
             btnCancel.UseVisualStyleBackColor = true;
@@ -164,18 +173,20 @@
             // cbAvailable
             // 
             cbAvailable.AutoSize = true;
-            cbAvailable.Location = new Point(42, 456);
+            cbAvailable.Location = new Point(6, 503);
+            cbAvailable.Margin = new Padding(3, 4, 3, 4);
             cbAvailable.Name = "cbAvailable";
-            cbAvailable.Size = new Size(78, 19);
+            cbAvailable.Size = new Size(97, 24);
             cbAvailable.TabIndex = 14;
             cbAvailable.Text = "Достапна";
             cbAvailable.UseVisualStyleBackColor = true;
             // 
             // tbId
             // 
-            tbId.Location = new Point(43, 55);
+            tbId.Location = new Point(6, 52);
+            tbId.Margin = new Padding(3, 4, 3, 4);
             tbId.Name = "tbId";
-            tbId.Size = new Size(241, 23);
+            tbId.Size = new Size(275, 27);
             tbId.TabIndex = 15;
             tbId.TextChanged += tbId_TextChanged;
             tbId.Validating += tbId_Validating;
@@ -183,9 +194,9 @@
             // lbId
             // 
             lbId.AutoSize = true;
-            lbId.Location = new Point(43, 27);
+            lbId.Location = new Point(6, 28);
             lbId.Name = "lbId";
-            lbId.Size = new Size(135, 15);
+            lbId.Size = new Size(170, 20);
             lbId.TabIndex = 16;
             lbId.Text = "Идентификациски број";
             // 
@@ -193,32 +204,44 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(tbId);
+            groupBox1.Controls.Add(lbId);
+            groupBox1.Controls.Add(tbCarBrand);
+            groupBox1.Controls.Add(tbCarModel);
+            groupBox1.Controls.Add(cbAvailable);
+            groupBox1.Controls.Add(tbYear);
+            groupBox1.Controls.Add(btnCancel);
+            groupBox1.Controls.Add(lbBrand);
+            groupBox1.Controls.Add(btnSaveCar);
+            groupBox1.Controls.Add(lbModel);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(lbYear);
+            groupBox1.Controls.Add(tbPrice);
+            groupBox1.Controls.Add(tbMileage);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(34, 22);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(318, 599);
+            groupBox1.TabIndex = 17;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Додади нов автомобил";
+            // 
             // NewCar
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(389, 603);
-            Controls.Add(lbId);
-            Controls.Add(tbId);
-            Controls.Add(cbAvailable);
-            Controls.Add(btnCancel);
-            Controls.Add(btnSaveCar);
-            Controls.Add(label2);
-            Controls.Add(tbPrice);
-            Controls.Add(label1);
-            Controls.Add(tbMileage);
-            Controls.Add(lbYear);
-            Controls.Add(lbModel);
-            Controls.Add(lbBrand);
-            Controls.Add(tbYear);
-            Controls.Add(tbCarModel);
-            Controls.Add(tbCarBrand);
+            ClientSize = new Size(395, 672);
+            Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "NewCar";
-            Text = "NewCar";
+            Text = "Нов автомобил";
             Load += NewCar_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -239,5 +262,6 @@
         private TextBox tbId;
         private Label lbId;
         private ErrorProvider errorProvider1;
+        private GroupBox groupBox1;
     }
 }

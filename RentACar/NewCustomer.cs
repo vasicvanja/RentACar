@@ -35,11 +35,6 @@ namespace RentACar
                 e.Cancel = true;
                 errorProvider1.SetError(tbId, "Полето за матичен број е задолжително!");
             }
-            else if (Form1.checkIfCustomerExists(tbId.Text.ToString()))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(tbId, "Клиент со овој матичен број веќе постои!");
-            }
             else
             {
                 e.Cancel = false;

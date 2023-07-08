@@ -4,11 +4,9 @@ namespace RentACar
 {
     public partial class Form1 : Form
     {
-        public List<Car> cars;
         public Form1()
         {
             InitializeComponent();
-            cars = new List<Car>();
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
@@ -20,19 +18,16 @@ namespace RentACar
                 {
                     if (car.Id == newCar.Car.Id)
                     {
-                        MessageBox.Show("Автомобил со овој идентификациски број веќе постои", "Додади клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Автомобил со овој идентификациски број веќе постои!", "Додади клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
                 lbCars.Items.Add(newCar.Car);
             }
-
-
         }
 
         private void btnDeleteCar_Click(object sender, EventArgs e)
         {
-
             if (lbCars.SelectedIndex != -1)
             {
                 if (MessageBox.Show("Дали сте сигурни дека сакате да го избришете овој автомобил?", "Избриши автомобил", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -48,13 +43,13 @@ namespace RentACar
 
         }
 
-
         private void lbCars_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lbCars.Items.Count == 0)
             {
                 btnDeleteCar.Enabled = false;
-            } else
+            }
+            else
             {
                 btnDeleteCar.Enabled = true;
             }
@@ -65,6 +60,11 @@ namespace RentACar
             NewCustomer newCustomer = new NewCustomer();
             if (newCustomer.ShowDialog() == DialogResult.OK)
             {
+                foreach (Customer customer in lbCustomers.Items)
+                {
+                    MessageBox.Show("Клиент со овој матичен број веќе постои!", "Додади клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 lbCustomers.Items.Add(newCustomer.Customer);
             }
         }
@@ -83,19 +83,6 @@ namespace RentACar
                 MessageBox.Show("Селектирајте го клиентот од листата на клиенти којшто сакате да го избришете!", "Избриши клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        public bool checkIfCustomerExists(string Id)
-        {
-            for (int i = 0; i < lbCustomers.Items.Count; ++i)
-            {
-                Customer customer = lbCustomers.Items[i] as Customer;
-                if (customer.Id == Id)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }
