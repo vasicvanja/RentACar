@@ -1,16 +1,16 @@
 ﻿using RentACar.Models;
 using System.ComponentModel;
-using System.Windows.Forms;
 
 namespace RentACar
 {
     public partial class NewCustomer : Form
     {
         public Customer Customer { get; set; }
+        public Form1 Form1 { get; set; } = new Form1();
 
         public NewCustomer()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -34,6 +34,11 @@ namespace RentACar
             {
                 e.Cancel = true;
                 errorProvider1.SetError(tbId, "Полето за матичен број е задолжително!");
+            }
+            else if (Form1.checkIfCustomerExists(tbId.Text.ToString()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(tbId, "Клиент со овој матичен број веќе постои!");
             }
             else
             {

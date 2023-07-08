@@ -195,10 +195,10 @@
             // 
             // btnHistoryOfRentals
             // 
-            btnHistoryOfRentals.Location = new Point(0, 617);
+            btnHistoryOfRentals.Location = new Point(6, 617);
             btnHistoryOfRentals.Margin = new Padding(3, 4, 3, 4);
             btnHistoryOfRentals.Name = "btnHistoryOfRentals";
-            btnHistoryOfRentals.Size = new Size(348, 31);
+            btnHistoryOfRentals.Size = new Size(342, 31);
             btnHistoryOfRentals.TabIndex = 3;
             btnHistoryOfRentals.Text = "Историја на изнајмувања";
             btnHistoryOfRentals.UseVisualStyleBackColor = true;

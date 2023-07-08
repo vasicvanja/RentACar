@@ -1,4 +1,6 @@
-﻿namespace RentACar
+﻿using RentACar.Models;
+
+namespace RentACar
 {
     public partial class Form1 : Form
     {
@@ -30,6 +32,19 @@
                 MessageBox.Show("Селектирајте го клиентот од листата на клиенти којшто сакате да го избришете!", "Избриши клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        public bool checkIfCustomerExists(string Id)
+        {
+            for (int i = 0; i < lbCustomers.Items.Count; ++i)
+            {
+                Customer customer = lbCustomers.Items[i] as Customer;
+                if (customer.Id == Id)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
