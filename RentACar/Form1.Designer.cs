@@ -28,12 +28,198 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            lbCars = new ListBox();
+            groupBox1 = new GroupBox();
+            btnDeleteCar = new Button();
+            btnAddCar = new Button();
+            groupBox2 = new GroupBox();
+            btnDeleteClient = new Button();
+            btnAddClient = new Button();
+            lbClients = new ListBox();
+            groupBox3 = new GroupBox();
+            btnDeleteRental = new Button();
+            btnAddRental = new Button();
+            lbRentals = new ListBox();
+            btnDetails = new Button();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            SuspendLayout();
+            // 
+            // lbCars
+            // 
+            lbCars.FormattingEnabled = true;
+            lbCars.ItemHeight = 20;
+            lbCars.Location = new Point(6, 28);
+            lbCars.Margin = new Padding(3, 4, 3, 4);
+            lbCars.Name = "lbCars";
+            lbCars.Size = new Size(348, 464);
+            lbCars.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btnDeleteCar);
+            groupBox1.Controls.Add(btnAddCar);
+            groupBox1.Controls.Add(lbCars);
+            groupBox1.Location = new Point(43, 39);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(360, 669);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Автомобили";
+            // 
+            // btnDeleteCar
+            // 
+            btnDeleteCar.Location = new Point(6, 563);
+            btnDeleteCar.Margin = new Padding(3, 4, 3, 4);
+            btnDeleteCar.Name = "btnDeleteCar";
+            btnDeleteCar.Size = new Size(348, 31);
+            btnDeleteCar.TabIndex = 2;
+            btnDeleteCar.Text = "Избриши автомобил";
+            btnDeleteCar.UseVisualStyleBackColor = true;
+            // 
+            // btnAddCar
+            // 
+            btnAddCar.Location = new Point(6, 509);
+            btnAddCar.Margin = new Padding(3, 4, 3, 4);
+            btnAddCar.Name = "btnAddCar";
+            btnAddCar.Size = new Size(348, 31);
+            btnAddCar.TabIndex = 1;
+            btnAddCar.Text = "Додади автомобил";
+            btnAddCar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(btnDeleteClient);
+            groupBox2.Controls.Add(btnAddClient);
+            groupBox2.Controls.Add(lbClients);
+            groupBox2.Location = new Point(450, 39);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(360, 669);
+            groupBox2.TabIndex = 2;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Клиенти";
+            // 
+            // btnDeleteClient
+            // 
+            btnDeleteClient.Location = new Point(6, 563);
+            btnDeleteClient.Margin = new Padding(3, 4, 3, 4);
+            btnDeleteClient.Name = "btnDeleteClient";
+            btnDeleteClient.Size = new Size(348, 31);
+            btnDeleteClient.TabIndex = 2;
+            btnDeleteClient.Text = "Избриши клиент";
+            btnDeleteClient.UseVisualStyleBackColor = true;
+            // 
+            // btnAddClient
+            // 
+            btnAddClient.Location = new Point(6, 509);
+            btnAddClient.Margin = new Padding(3, 4, 3, 4);
+            btnAddClient.Name = "btnAddClient";
+            btnAddClient.Size = new Size(348, 31);
+            btnAddClient.TabIndex = 1;
+            btnAddClient.Text = "Додади клиент";
+            btnAddClient.UseVisualStyleBackColor = true;
+            // 
+            // lbClients
+            // 
+            lbClients.FormattingEnabled = true;
+            lbClients.ItemHeight = 20;
+            lbClients.Location = new Point(6, 28);
+            lbClients.Margin = new Padding(3, 4, 3, 4);
+            lbClients.Name = "lbClients";
+            lbClients.Size = new Size(348, 464);
+            lbClients.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(btnDetails);
+            groupBox3.Controls.Add(btnDeleteRental);
+            groupBox3.Controls.Add(btnAddRental);
+            groupBox3.Controls.Add(lbRentals);
+            groupBox3.Location = new Point(863, 39);
+            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(3, 4, 3, 4);
+            groupBox3.Size = new Size(360, 669);
+            groupBox3.TabIndex = 3;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Клиенти";
+            // 
+            // btnDeleteRental
+            // 
+            btnDeleteRental.Location = new Point(6, 563);
+            btnDeleteRental.Margin = new Padding(3, 4, 3, 4);
+            btnDeleteRental.Name = "btnDeleteRental";
+            btnDeleteRental.Size = new Size(348, 31);
+            btnDeleteRental.TabIndex = 2;
+            btnDeleteRental.Text = "Избриши изнајмување";
+            btnDeleteRental.UseVisualStyleBackColor = true;
+            // 
+            // btnAddRental
+            // 
+            btnAddRental.Location = new Point(6, 509);
+            btnAddRental.Margin = new Padding(3, 4, 3, 4);
+            btnAddRental.Name = "btnAddRental";
+            btnAddRental.Size = new Size(348, 31);
+            btnAddRental.TabIndex = 1;
+            btnAddRental.Text = "Додади изнајмување";
+            btnAddRental.UseVisualStyleBackColor = true;
+            // 
+            // lbRentals
+            // 
+            lbRentals.FormattingEnabled = true;
+            lbRentals.ItemHeight = 20;
+            lbRentals.Location = new Point(6, 27);
+            lbRentals.Margin = new Padding(3, 4, 3, 4);
+            lbRentals.Name = "lbRentals";
+            lbRentals.Size = new Size(348, 464);
+            lbRentals.TabIndex = 0;
+            // 
+            // btnDetails
+            // 
+            btnDetails.Location = new Point(6, 617);
+            btnDetails.Margin = new Padding(3, 4, 3, 4);
+            btnDetails.Name = "btnDetails";
+            btnDetails.Size = new Size(348, 31);
+            btnDetails.TabIndex = 3;
+            btnDetails.Text = "Детали за изнајмување";
+            btnDetails.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1620, 793);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form1";
+            Text = "Form1";
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox lbCars;
+        private GroupBox groupBox1;
+        private Button btnDeleteCar;
+        private Button btnAddCar;
+        private GroupBox groupBox2;
+        private Button btnDeleteClient;
+        private Button btnAddClient;
+        private ListBox lbClients;
+        private GroupBox groupBox3;
+        private Button btnDeleteRental;
+        private Button btnAddRental;
+        private ListBox lbRentals;
+        private Button btnDetails;
     }
 }
