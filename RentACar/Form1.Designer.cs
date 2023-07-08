@@ -43,6 +43,12 @@
             btnAddRental = new Button();
             lbRentals = new ListBox();
             fileSystemWatcher1 = new FileSystemWatcher();
+            label1 = new Label();
+            label2 = new Label();
+            tbFrom = new TextBox();
+            tbTo = new TextBox();
+            tbTotal = new TextBox();
+            label3 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -158,6 +164,12 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(tbTotal);
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(tbTo);
+            groupBox3.Controls.Add(tbFrom);
+            groupBox3.Controls.Add(label2);
+            groupBox3.Controls.Add(label1);
             groupBox3.Controls.Add(btnDetails);
             groupBox3.Controls.Add(btnDeleteRental);
             groupBox3.Controls.Add(btnAddRental);
@@ -166,7 +178,7 @@
             groupBox3.Margin = new Padding(3, 4, 3, 4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 4, 3, 4);
-            groupBox3.Size = new Size(360, 669);
+            groupBox3.Size = new Size(360, 803);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
             groupBox3.Text = "Изнајмувања";
@@ -216,6 +228,54 @@
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(54, 676);
+            label1.Name = "label1";
+            label1.Size = new Size(31, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Од:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(54, 718);
+            label2.Name = "label2";
+            label2.Size = new Size(31, 20);
+            label2.TabIndex = 4;
+            label2.Text = "До:";
+            // 
+            // tbFrom
+            // 
+            tbFrom.Location = new Point(185, 673);
+            tbFrom.Name = "tbFrom";
+            tbFrom.Size = new Size(125, 27);
+            tbFrom.TabIndex = 5;
+            // 
+            // tbTo
+            // 
+            tbTo.Location = new Point(185, 715);
+            tbTo.Name = "tbTo";
+            tbTo.Size = new Size(125, 27);
+            tbTo.TabIndex = 6;
+            // 
+            // tbTotal
+            // 
+            tbTotal.Location = new Point(185, 757);
+            tbTotal.Name = "tbTotal";
+            tbTotal.Size = new Size(125, 27);
+            tbTotal.TabIndex = 8;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(54, 760);
+            label3.Name = "label3";
+            label3.Size = new Size(99, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Вкупна цена:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -230,6 +290,7 @@
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
         }
@@ -251,5 +312,11 @@
         private Button btnDetails;
         private FileSystemWatcher fileSystemWatcher1;
         private Button btnHistoryOfRentals;
+        private TextBox tbTotal;
+        private Label label3;
+        private TextBox tbTo;
+        private TextBox tbFrom;
+        private Label label2;
+        private Label label1;
     }
 }
