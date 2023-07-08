@@ -1,4 +1,7 @@
-﻿namespace RentACar.Models
+﻿using System.Diagnostics;
+using System.Reflection;
+
+namespace RentACar.Models
 {
     public class Rent
     {
@@ -15,6 +18,11 @@
             To = to;
             Customer = customer;
             Car = car;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} {2} {3}", String.Format("{0:M/d/yyyy}", From), String.Format("{0:M/d/yyyy}", To), Customer.ToString(),Car.ToString());
         }
     }
 }

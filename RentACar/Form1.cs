@@ -7,6 +7,7 @@ namespace RentACar
         public Form1()
         {
             InitializeComponent();
+            lbRentals.Items.Add(new Rent(new DateTime(2023, 4, 5), new DateTime(2023, 4, 5), new Customer("54665", "Peco", "Pecovski", "Varsavska 5"), new Car("2", "BMW", "X5", "2021", 12200, 200, true)));
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
@@ -94,6 +95,24 @@ namespace RentACar
             else
             {
                 btnDeleteClient.Enabled = true;
+            }
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            if (lbRentals.SelectedIndex != -1)
+            {
+                Rent selectedRental = lbRentals.Items[lbRentals.SelectedIndex] as Rent;
+                RentalDetails rentalDetails = new RentalDetails(selectedRental);
+                if (rentalDetails.ShowDialog() == DialogResult.OK)
+                {
+                   
+                }
+            }
+            else
+            {
+                MessageBox.Show("Селектирајте ставка од листата за активни рентирања", "Избриши клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }

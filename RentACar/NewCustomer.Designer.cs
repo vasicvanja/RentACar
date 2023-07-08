@@ -59,9 +59,11 @@ namespace RentACar
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(69, 52);
+            groupBox1.Location = new Point(60, 39);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(429, 405);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(375, 304);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Додади нов клиент";
@@ -69,9 +71,10 @@ namespace RentACar
             // btnAdd
             // 
             btnAdd.Enabled = false;
-            btnAdd.Location = new Point(6, 359);
+            btnAdd.Location = new Point(5, 269);
+            btnAdd.Margin = new Padding(3, 2, 3, 2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(134, 40);
+            btnAdd.Size = new Size(117, 30);
             btnAdd.TabIndex = 9;
             btnAdd.Text = "Додади";
             btnAdd.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@ namespace RentACar
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(245, 359);
+            btnCancel.Location = new Point(214, 269);
+            btnCancel.Margin = new Padding(3, 2, 3, 2);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(134, 40);
+            btnCancel.Size = new Size(117, 30);
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Откажи";
             btnCancel.UseVisualStyleBackColor = true;
@@ -89,36 +93,40 @@ namespace RentACar
             // 
             // tbAddress
             // 
-            tbAddress.Location = new Point(6, 301);
+            tbAddress.Location = new Point(5, 226);
+            tbAddress.Margin = new Padding(3, 2, 3, 2);
             tbAddress.Name = "tbAddress";
-            tbAddress.Size = new Size(373, 27);
+            tbAddress.Size = new Size(327, 23);
             tbAddress.TabIndex = 7;
             tbAddress.TextChanged += tbAddress_TextChanged;
             tbAddress.Validating += tbAddress_Validating;
             // 
             // tbSurname
             // 
-            tbSurname.Location = new Point(6, 217);
+            tbSurname.Location = new Point(5, 163);
+            tbSurname.Margin = new Padding(3, 2, 3, 2);
             tbSurname.Name = "tbSurname";
-            tbSurname.Size = new Size(373, 27);
+            tbSurname.Size = new Size(327, 23);
             tbSurname.TabIndex = 6;
             tbSurname.TextChanged += tbSurname_TextChanged;
             tbSurname.Validating += tbSurname_Validating;
             // 
             // tbName
             // 
-            tbName.Location = new Point(6, 133);
+            tbName.Location = new Point(5, 100);
+            tbName.Margin = new Padding(3, 2, 3, 2);
             tbName.Name = "tbName";
-            tbName.Size = new Size(373, 27);
+            tbName.Size = new Size(327, 23);
             tbName.TabIndex = 5;
             tbName.TextChanged += tbName_TextChanged;
             tbName.Validating += tbName_Validating;
             // 
             // tbId
             // 
-            tbId.Location = new Point(6, 57);
+            tbId.Location = new Point(5, 43);
+            tbId.Margin = new Padding(3, 2, 3, 2);
             tbId.Name = "tbId";
-            tbId.Size = new Size(373, 27);
+            tbId.Size = new Size(327, 23);
             tbId.TabIndex = 4;
             tbId.TextChanged += tbId_TextChanged;
             tbId.Validating += tbId_Validating;
@@ -126,36 +134,36 @@ namespace RentACar
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 278);
+            label4.Location = new Point(5, 208);
             label4.Name = "label4";
-            label4.Size = new Size(62, 20);
+            label4.Size = new Size(49, 15);
             label4.TabIndex = 3;
             label4.Text = "Адреса:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 194);
+            label3.Location = new Point(5, 146);
             label3.Name = "label3";
-            label3.Size = new Size(75, 20);
+            label3.Size = new Size(59, 15);
             label3.TabIndex = 2;
             label3.Text = "Презиме:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(6, 110);
+            label2.Location = new Point(5, 82);
             label2.Name = "label2";
-            label2.Size = new Size(42, 20);
+            label2.Size = new Size(34, 15);
             label2.TabIndex = 1;
             label2.Text = "Име:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 34);
+            label1.Location = new Point(5, 26);
             label1.Name = "label1";
-            label1.Size = new Size(108, 20);
+            label1.Size = new Size(86, 15);
             label1.TabIndex = 0;
             label1.Text = "Матичен број:";
             // 
@@ -165,12 +173,14 @@ namespace RentACar
             // 
             // NewCustomer
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(544, 496);
+            ClientSize = new Size(476, 372);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "NewCustomer";
             Text = "Нов клиент";
+            Load += NewCustomer_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((ISupportInitialize)errorProvider1).EndInit();

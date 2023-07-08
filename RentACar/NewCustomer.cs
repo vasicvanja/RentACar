@@ -10,7 +10,7 @@ namespace RentACar
 
         public NewCustomer()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -110,6 +110,11 @@ namespace RentACar
             {
                 btnAdd.Enabled = true;
             }
+        }
+
+        private void NewCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
