@@ -9,6 +9,8 @@
         public int Price { get; set; }
         public bool IsAvailable { get; set; }
 
+        public Car() { }
+
         public Car(string brand, string model, string year, int mileage, int price, bool isAvailable)
         {
             Brand = brand;
