@@ -10,7 +10,7 @@ namespace RentACar
             dtpFrom.MinDate = DateTime.Now;
             dtpTo.MinDate = DateTime.Now;
             lbCars.Items.Add(new Car("1", "BMW", "520", "2023", 1000, 200, true));
-            lbCustomers.Items.Add(new Customer("1", "Vanja", "Vasic", "bul. V. S. Bato 28/28"));
+            lbCustomers.Items.Add(new Customer("1", "John", "Doe", "5th Avenue NYC"));
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
@@ -115,9 +115,9 @@ namespace RentACar
             rental.Customer = lbCustomers.SelectedItem as Customer;
             rental.From = Convert.ToDateTime(dtpFrom.Text);
             rental.To = Convert.ToDateTime(dtpTo.Text);
-            checkAvailability(rental.From, rental.To);
             if (rental.Car != null && rental.Customer != null)
             {
+                checkAvailability(rental.From, rental.To, rental.Car);
                 if (rental.Car.IsAvailable)
                 {
                     rental.TotalPrice = int.Parse(tbTotalPrice.Text);
@@ -225,9 +225,8 @@ namespace RentACar
             }
         }
 
-        public void checkAvailability(DateTime from, DateTime to)
+        public void checkAvailability(DateTime from, DateTime to, Car car)
         {
-            Car car = lbCars.SelectedItem as Car;
             foreach (Rent rent in lbRentals.Items)
             {
                 if (car != null)

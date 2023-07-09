@@ -27,7 +27,7 @@ namespace RentACar.Models
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2} {3} {4} KM {5} EUR", Id, Brand, Model, Year, Mileage, PricePerDay);
+            return string.Format("{0}. {1} {2} {3} {4} KM {5} EUR", Id, Brand, Model, Year, Mileage, PricePerDay);
         }
     }
 }
