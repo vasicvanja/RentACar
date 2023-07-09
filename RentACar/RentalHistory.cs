@@ -13,7 +13,7 @@ namespace RentACar
 
         private void RentalHistory_Load(object sender, EventArgs e)
         {
-            label1.Text = Customer.Name;
+            label1.Text = Customer.Name.ToString() + " " + Customer.Surname.ToString();
             foreach (Rent rent in Customer.Rentals)
             {
                 string temp = rent.ToString() + " " + String.Format("{0:MM/dd/yyyy}", rent.From) + " - " + String.Format("{0:MM/dd/yyyy}", rent.To);

@@ -72,8 +72,11 @@ namespace RentACar
             {
                 foreach (Customer customer in lbCustomers.Items)
                 {
-                    MessageBox.Show("Клиент со овој матичен број веќе постои!", "Додади клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    if (customer.Id == newCustomer.Customer.Id)
+                    {
+                        MessageBox.Show("Клиент со овој матичен број веќе постои!", "Додади клиент", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 lbCustomers.Items.Add(newCustomer.Customer);
             }
